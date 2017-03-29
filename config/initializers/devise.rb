@@ -250,7 +250,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :github, "3b1a057bb981ed4afae4", "b08f84d7d6c22dd828770f1868f82710077692db", callback_url: "http://localhost:3000/users/auth/github/callback", scope: 'user:email'
+  config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET'], callback_url: "http://localhost:3000/users/auth/github/callback", scope: 'user:email'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
